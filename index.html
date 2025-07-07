@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Share Modal</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    
+    <!-- main-container -->
+    <div class="main-container">
+    
+        <!-- circles -->
+        <div id="top-circle"></div>
+        <div id="bottom-circle"></div>
+
+        <!-- card container -->
+        <div class="card-container">
+
+            <!-- profile-photo -->
+            <div class="profile-photo">
+                <img src="image.png" alt="profile-photo" height="120px" width="120px">
+            </div>
+
+            <!-- name-container -->
+            <div class="name-container">
+                <h2 id="name">Bhupinder</h2>
+                <h4 id="designation">Student, B.tech CSE</h3>
+            </div>
+
+            <!-- button-container -->
+            <div class="button-container">
+
+                <!-- button 1 -->
+                <button onclick="openModal()" id="share-button">
+                    <i class="fa-solid fa-share"></i>
+                    <span>Share My Profile</span>
+                </button>
+
+                <!-- button 2 -->
+                <a href="https://www.linkedin.com/in/bhupinder-singh-8616b432b/" target="_blank">
+                    <button id="follow-button">
+                        Follow me
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <!-- share modal -->
+        <div class="share-modal">
+
+            <div class="share-modal-header">
+                <h2 class="share-modal-heading">Share</h2>
+                <button onclick="closeModal()" class="share-modal-close-button">
+                    <i data-feather="x" style="height: 20px; width: 25px;"></i>
+                </button>
+            </div>
+
+            <!-- icon container -->
+            <div class="icons-container">
+                <!-- X icon -->
+                <div class="icon-container" onclick="shareProfile('twitter')">
+                    <div class="icon">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </div>
+                    <h4>X</h4>
+                </div>
+
+                <!-- linkedIn icon -->
+                <div class="icon-container" onclick="shareProfile('linkedin')">
+                    <div class="icon">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <h4>LinkedIn</h4>
+                </div>
+
+                <!-- Facebook icon -->
+                <div class="icon-container" onclick="shareProfile('facebook')">
+                    <div class="icon">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </div>
+                    <h4>Facebook</h4>
+                </div>
+
+                <!-- reddit icon -->
+                <div class="icon-container" onclick="shareProfile('reddit')">
+                    <div class="icon">
+                        <i class="fa-brands fa-reddit-alien"></i>
+                    </div>
+                    <h4>Reddit</h4>
+                </div>
+
+                <!-- WhatsApp icon -->
+                <div class="icon-container" onclick="shareProfile('whatsapp')">
+                    <div class="icon">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <h4>WhatsApp</h4>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- overlay -->
+        <div onclick="closeModal()" class="overlay"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      feather.replace();
+    </script>
+</body>
+</html>
